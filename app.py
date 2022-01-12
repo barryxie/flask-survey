@@ -55,7 +55,9 @@ def show_question(qid):
 
 @app.route('/complete')
 def complete():
-    return render_template('completion.html')  
+    questions = survey.questions
+    
+    return render_template('completion.html', questions = questions)  
 
 
 
